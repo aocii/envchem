@@ -1,0 +1,568 @@
+<ion-view view-title="Ph and Acidity">
+    <br><br><br><img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+  <ion-content>
+ 
+
+ 
+<!--<img src="/img/water_ionization_constant.jpg"> -->
+
+
+
+<!--   *******************************************   -->
+
+								<!--a:<input type="float" id="num1"> 
+								+
+								b:<input type="float" id="num2">
+								<button class="button button-balanced" ng-click="deneme()">=</button>
+								<div class="item item-divider">
+    							toplam=<p id="output"></p>
+  								</div></br> -->
+
+<!--   *******************************************   
+
+<input type="text" ng-model="h1veri">
+<button ng-click="hesapla(h1veri)">HIZLI HESAPLA {{h1veri}}</button>
+<p>Hesap sonuc:{{h1}}</p>-->
+
+<!--   *******************************************   -->
+<div class="card animated rubberBand">
+  <div class="item item-text-wrap">
+      <div class="bar bar-balanced">
+        <h1 class="title">pH&pOH Calculator With [H]</h1>
+    </div> </br></br></br>
+This modul calculates pH+pOH with molar concentration of 'h'&'oh'.</br>
+  <div class="card">
+    <div class="item item-divider">
+
+<div class="row">
+    <div class="col"><input type="number" placeholder="[H] value" ng-model="verihmolar"></div>
+    <div class="col"><center><button class="button button-small button-balanced" ng-click="islem(verihmolar)">Calculate pH</button></center></div>
+</div>
+
+<div class="row">
+    <div class="col"> <p>Result : {{cevapph}} pH</p></div>
+    <div class="col"><center><a class="button button-small button-assertive ion-help" href="#/app/9"></a></center></div>
+</div>
+
+<div class="row">
+    <div class="col"><input type="number" placeholder="[OH] value" ng-model="veriohmolar"></div>
+    <div class="col"><center><button class="button button-small button-balanced" ng-click="islem1(veriohmolar)">Calculate pOH</button></center> </div>
+</div>
+
+<div class="row">
+    <div class="col"> <p>Result : {{cevappoh}} pOH</p></div>
+    <div class="col"> <center><a class="button button-small button-assertive ion-help" href="#/app/10"> </a> </center></div>
+</div>
+<center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--   *******************************************   -->
+<div class="card animated rubberBand">
+  <div class="item item-text-wrap">
+  		<div class="bar bar-balanced">
+  			<h1 class="title">pH&pOH to Molarity&Concentration</h1> 
+  			<a class="button button-small button-assertive ion-help" href="#/app/11"></a>
+		</div> </br></br></br>
+	This modul converts ph or pOH to its vice versa and molar&mg/l concentration.   .</br>
+	
+	<div class="card">
+  	<div class="item item-divider">
+	
+<div class="row">
+  <div class="col"><input type="number" placeholder="pH value" ng-model="veriph"></div>
+  <div class="row"><center><button class="button button-small button-balanced" ng-click="islem2(veriph)">Calculate pOH</button></center></div>
+</div>
+
+	
+    <p>result : {{cevappoh1}}pOH</p>
+    <p>result : {{cevapmolarh}} Molar 'h'</p>
+    <p>result : {{cevapmglh}}  Mg/l 'h'</p>
+  	
+
+<div class="row">
+  <div class="col"><input type="number" placeholder="pOH value" ng-model="veripoh"></div>
+  <div class="row"><center><button class="button button-small button-balanced" ng-click="islem3(veripoh)">Calculate pH</button></center></div>
+</div>
+  	<p>Result : {{cevapph1}} pH</p>
+    <p>Result : {{cevapoh1}} Molar 'oh'</p> 
+    <p>Result : {{cevapmgloh}} Mg/l 'oh'</p>
+<center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>
+</div></div>
+
+
+
+  </div>
+</div>
+<!--   *******************************************   -->
+<div class="card animated rubberBand">
+  <div class="item item-text-wrap">
+
+  		<div class="bar bar-balanced">
+  			<h1 class="title">pH Values In Distilled Water </h1>
+		</div> </br></br></br>
+	In this module you can calculate the pH & pOh and [H]&[OH] and Concentration of hydrogen and hidroxide in mg/l  at the asked temperature of pure water.
+</br></br>
+	For the further explanations about the change of pH with the temparature please click the button. 
+	<a class="button button-small button-assertive ion-help" href="#/app/12"></a></br></br>     
+  	<img class="full-image" src="/img/water_ionization_constant.jpg"></br></br> 
+  	
+  	After applying line fitting via linear regression, we got the equation of (T°)&pH. </br>
+  	For the further explanations about linear regression please click the button.
+  	<a class="button button-small button-assertive ion-help" href="#/app/13"></a></br></br>  
+  	<img class="full-image" src="/img/p1.jpg"> </br></br>
+  	Now we can calculate the pH and [H]&[OH] of pure water at the asked temparature. </br> </br>
+  	
+  	<div class="card animated rubberBand">
+  	<div class="item item-divider">
+  	Type (T)°Celsius value <input type="number" ng-model="t"></br>
+	<button class="button button-small button-balanced" ng-click="regresyon(t)">Calculate</button>
+	<p> {{outputph}} pH</p>
+	<p> {{outputpoh}} pOH</p>
+	<p> {{outputmolarh}} molar 'H'</p>
+	<p> {{outputmglh}} mg/l'H'</p>
+	<p> {{outputmolaroh}} molar 'OH'</p>
+	<p> {{outputmgloh}} mg/l 'OH'</p></div></div>
+
+
+<center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>
+
+  </div>
+</div>
+
+<!--   *******************************************   -->
+
+<div class="card animated rubberBand">
+  <div class="item item-text-wrap">
+      <div class="bar bar-balanced">
+        <h1 class="title">Strong Acid Base pH [H]</h1>
+        <a class="button button-small button-assertive ion-help" href=></a>
+    </div> </br></br></br>
+    
+    <div class="card">
+      <div class="item item-text-wrap">
+        
+          <div class="bar bar-header bar-balanced">
+            <h1 class="title">6 Strong Acids</h1>
+          </div>
+          </br></br>
+        
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongacid1.jpg">
+              
+              <div class="row">
+                <div class="col">Ka = large</div>
+                <div class="col">pKa = -15.2</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="acid1molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem4(acid1molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphacid1}} pH</p> </div>
+              </div></div></div>
+              <!--   *******************************************   -->
+
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongacid2.jpg">
+              
+
+              <div class="row">
+                <div class="col">Ka = 1x10^6</div>
+                <div class="col">pKa = -6</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="acid2molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem5(acid2molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphacid2}} pH</p> </div>
+              </div>
+              </div></div>
+              <!--   *******************************************   -->
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongacid3.jpg">
+              
+
+              <div class="row">
+                <div class="col">Ka = 1x10^9</div>
+                <div class="col">pKa = -9</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="acid3molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem6(acid3molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphacid3}} pH</p> </div>
+              </div>
+              </div></div>
+
+              <!--   *******************************************   -->
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongacid4.jpg">
+              
+
+              <div class="row">
+                <div class="col">Ka = 3.12x10^9</div>
+                <div class="col">pKa = -9.5</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="acid4molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem7(acid4molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphacid4}} pH</p> </div>
+              </div>
+              </div></div>
+              
+              <!--   *******************************************   -->
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongacid5.jpg">
+              
+
+              <div class="row">
+                <div class="col">Ka = 28.2</div>
+                <div class="col">pKa = -1.45</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="acid5molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem8(acid5molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphacid5}} pH</p> </div>
+              </div>
+              </div></div>
+
+              <!--   *******************************************   -->
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongacid6.jpg">
+              
+
+              <div class="row">
+                <div class="col">Ka = 1x10^3</div>
+                <div class="col">pKa = -3</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="acid6molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem9(acid6molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphacid6}} pH</p> </div>
+              </div>
+              </div></div>           
+      </div></div>
+      <!--   *******************************************   -->
+      <div class="card animated rubberBand">
+      <div class="item item-text-wrap">
+        
+          <div class="bar bar-header bar-balanced">
+            <h1 class="title">6 Strong Base</h1>
+          </div>
+          </br></br>
+        
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongbase1.jpg">
+              
+              <div class="row">
+                <div class="col">Kb = 2.29</div>
+                <div class="col">pKb = -0.36</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="base1molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem10(base1molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphbase1}} pH</p> </div>
+              </div></div></div>
+              <!--   *******************************************   -->
+
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongbase2.jpg">
+              
+
+              <div class="row">
+                <div class="col">Kb = -1.58</div>
+                <div class="col">pKb = 0.2</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="base2molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem11(base2molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphbase2}} pH</p> </div>
+              </div>
+              </div></div>
+              <!--   *******************************************   -->
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongbase3.jpg">
+              
+
+              <div class="row">
+                <div class="col">Kb = -3.16</div>
+                <div class="col">pKb = 0.5</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="base3molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem12(base3molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphbase3}} pH</p> </div>
+              </div>
+              </div></div>
+
+              <!--   *******************************************   -->
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongbase4.jpg">
+              
+
+              <div class="row">
+                <div class="col">Kb = 269,15</div>
+                <div class="col">pKb = 2.43</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="base4molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem13(base4molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphbase4}} pH</p> </div>
+              </div>
+              </div></div>
+              
+              <!--   *******************************************   -->
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongbase5.jpg">
+              
+
+              <div class="row">
+                <div class="col">Kb = 1.99</div>
+                <div class="col">pKb = 0.3</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="base5molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem14(base5molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphbase5}} pH</p> </div>
+              </div>
+              </div></div>
+
+              <!--   *******************************************   -->
+              <div class="list">
+                <div class="item item-divider">
+                  <img class="full-image" src="/img/strongbase6.jpg">
+              
+
+              <div class="row">
+                <div class="col">Ka = 1.41</div>
+                <div class="col">pKa = 0.15</div>
+              </div>
+              
+              
+                <div class="row">
+                  <div class="col">Type Molarity </div>
+                  <div class="col"><input type="number" ng-model="base6molar"></div>
+                </div>
+              
+              <div class="row">
+                <div class="col">
+                  <button class="button button-small button-balanced" ng-click="islem15(base6molar)">Calculate</button>
+                </div>
+                <div class="col"> <p> {{cevapphbase6}} pH</p> </div>
+              </div>
+              </div></div>           
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!--   *******************************************   -->
+<div class="card animated rubberBand">
+  <div class="item item-text-wrap">
+      <div class="bar bar-balanced">
+        <h1 class="title">Weak Acid & Base pH </h1>
+        <a class="button button-small button-assertive ion-help" href=></a>
+    </div> </br></br></br>
+    
+    <div class="card">
+      <div class="item item-text-wrap">
+        
+          <div class="bar bar-header bar-balanced">
+            <h1 class="title">PH Calculator With pKa & [M]</h1>
+          </div>
+          </br></br></br>
+        This modul calculates pH values of weak acids via the data which you enter by molar concentration and pKa value. 
+                <div class="row">
+                  <div class="col col-75">For pKa values of common acids please click the button.</div>
+                  <div class="col"><a class="button icon-right ion-chevron-right button-calm" href="#/app/15"></a></div>
+                </div>
+
+
+
+
+
+              <div class="list">
+                <div class="item item-divider">
+
+                  <div class="list">
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Molarity</span>
+                      <input type="number" placeholder="Type initial concentraion " ng-model="weakacidinitialmolar">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">pKa</span>
+                      <input type="number" placeholder="Type pKa value" ng-model="weakacidpka">
+                    </label>
+                  
+                  </div>
+</br>
+<button class="button button-block button-balanced" ng-click="islem16(weakacidinitialmolar , weakacidpka)">
+  Calculate
+</button>
+
+                      <div class="row responsive-sm">
+                        <div class="col"> Acid Ka = {{cevappkatoka}}</div>
+                        <div class="col"> Molar product = {{cevapmolarproduct}} </div>
+                        <div class="col"> Final pH = {{cevapfinalph}}  </div>
+                      </div>
+                      
+                    
+                      <center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>          
+              </div>   </div>    </div>    </div>
+
+<div class="card animated rubberBand">
+      <div class="item item-text-wrap">
+        
+          <div class="bar bar-header bar-balanced">
+            <h1 class="title">PH Calculator With pKb & [M]</h1>
+          </div>
+          </br></br></br>
+        This modul calculates pH values of weak bases via the data which you enter by molar concentration and pKb value. 
+                <div class="row">
+                  <div class="col col-75">For pKb values of common bases please click the button.</div>
+                  <div class="col"><a class="button icon-right ion-chevron-right button-calm" href="#/app/16"></a></div>
+                </div>
+
+
+
+
+
+              <div class="list">
+                <div class="item item-divider">
+
+                  <div class="list">
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Molarity</span>
+                      <input type="number" placeholder="Type initial concentraion " ng-model="weakbaseinitialmolar">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">pKb</span>
+                      <input type="number" placeholder="Type pKb value" ng-model="weakbasepkb">
+                    </label>
+                  
+                  </div> </br>
+
+<button class="button button-block button-balanced" ng-click="islem17(weakbaseinitialmolar , weakbasepkb)">
+  Calculate
+</button>
+
+                      <div class="row responsive-sm">
+                        <div class="col"> Base Kb = {{cevappkbtokb}}</div>
+                        <div class="col"> Molar product = {{cevapmolarproductbase}} </div>
+                        <div class="col"> Final pH = {{cevapfinalphbase}}  </div>
+                      </div>
+                      
+                        <center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>        
+              </div>
+
+
+
+            </div></div>
+
+
+
+
+ 
+ </ion-content>
+</ion-view>

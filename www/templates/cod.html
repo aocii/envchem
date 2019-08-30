@@ -1,0 +1,66 @@
+<ion-view view-title="Chemical Oxygen Demand">
+  <br><br><br><img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+  <ion-content>
+    
+
+<div class="card animated flip">
+  <div class="item item-text-wrap">
+    <div class="bar bar-header bar-balanced">
+  		<h1 class="title">Theoretical C.O.D.</h1>
+	  <button class="button button-small button-assertive ion-help" ng-click = "showAlertcod()"></button>
+
+  </div> </br> </br> <br>
+    	&nbsp;&nbsp;&nbsp;This modul calculates Theoretical COD with the number of the oxygen,hidrogen,carbon and azote atoms which your compound incules and the concentration of your compound. All you need to do is enter your compounds concentration and numbers of your compounds atoms.  
+    	
+    	
+<div class="card "  >
+  <div class="item item-text-wrap">
+<img class="full-image" src="/img/phenol.jpg">  </div>
+</div>
+
+
+<div class="row">
+  <div class="col"><center>Oxygen</center></div>
+  <div class="col"><center>Hydrogen</center></div>
+  <div class="col"><center>Carbon</center></div>
+  <div class="col"><center>Azote</center></div>
+  
+</div>
+
+  
+<div class="row">
+  <div class="col"><input class="input" type="number" placeholder="Oxygen" ng-model="o"></div>
+  <div class="col"><input class="input" type="number" placeholder="Hydrogen" ng-model="h"></div>
+  <div class="col"><input class="input" type="number" placeholder="Carbon" ng-model="c"></div>
+  <div class="col"><input class="input" type="number" placeholder="Azote" ng-model="n"></div>
+  
+</div>
+
+
+
+<div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="number" placeholder="Type mg/l concentration" ng-model="cmgl">
+    </label>
+    <button class="button button-small button-balanced" ng-click="cod(c,h,o,n,cmgl)">
+      Calculate
+    </button>
+  </div>
+
+<button class="button button-full button-balanced">
+  C.O.D. = {{codmgl}} mg/l
+</button>
+ 	
+<center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>
+
+
+  </div>
+</div>
+
+   
+
+
+  </ion-content>
+</ion-view>

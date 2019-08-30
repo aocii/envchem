@@ -1,0 +1,136 @@
+<ion-view view-title="Hardness">
+  <br><br><br><img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+  <ion-content>
+    
+
+
+    <div class="card animated swing">
+      <div class="item item-text-wrap">
+        
+          <div class="bar bar-header bar-balanced">
+            <h1 class="title">Hardness In Water </h1>
+          </div>
+          </br></br>
+        This modul calculates hardness speciess. 
+                <div class="row">
+                  <div class="col col-75">For the further informations about calculations please touch the button.</div>
+                  <div class="col"><a class="button icon-right ion-chevron-right button-calm" href="#/app/19"></a></div>
+                </div>
+If your sample does not inculude any of this ions please leave blank. </br> 
+
+<div class="button-bar">
+  <a class="button button-{{renk}}" ng-click="conc_terc()">{{trch1}}</a>
+ 
+  
+</div>
+
+              <div class="list">
+                <div class="item item-divider">
+
+                  <div class="list">
+                   	
+
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Calcium</span>
+                      <input type="number" placeholder="{{trch}}" ng-model="ca">
+                    </label>
+                   
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Magnesium</span>
+                      <input type="number" placeholder="{{trch}}" ng-model="mg">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Iron</span>
+                      <input type="number" placeholder="{{trch}}" ng-model="fe">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Manganese</span>
+                      <input type="number" placeholder="{{trch}}" ng-model="mn">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Strontium</span>
+                      <input type="number" placeholder="{{trch}}" ng-model="sr">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Hidroxide</span>
+                      <input type="number" placeholder="{{trch}}" ng-model="oh">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Carbonate</span>
+                      <input type="number" placeholder="{{trch}}" ng-model="co3">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Bicarbonate</span>
+                      <input type="number" placeholder="{{trch}}" ng-model="hco3">
+                    </label>
+                  
+                  </div></br>
+
+<button class="button button-block button-{{renk}}" ng-click="sertlik(fe,mn,ca,mg,sr,oh,co3,hco3)">
+  Calculate
+</button>
+<center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>
+
+
+<button class="button button-full renkler_{{skala}}">  Water type = 
+  {{sertlikcesidi}} 
+</button>
+
+                      <div class="row responsive-sm">
+                        <div class="col"> Total Alkanity = {{toplamalkanite}}</div>
+                        <div class="col"> Total Hardness = {{toplamsertlik}}</div>
+                        <div class="col"> Carbonate Hardness = {{karbonatsertlik}}</div>
+                      	<div class="col"> Non-Carbonate Hardness = {{nonkarbonatsertlik}}</div>
+                      	<div class="col"> Iron Hardness = {{fesertli}}</div>
+                      	<div class="col"> Manganese Hardness = {{mnsertli}}</div>
+                      	<div class="col"> Calcium Hardness = {{casertli}}</div>
+                      	<div class="col"> Magnesium Hardness = {{mgsertli}}</div>
+                      	<div class="col"> Strontium Hardness = {{srsertli}}</div>
+
+                      </div>
+
+                      All the values above are in Calcium Carbonate Mg/L.
+ 
+
+
+<div class="list">
+
+    <a class="item item-avatar" href="">
+      <img src="/img/fransız.jpg">
+      <h2>French Hardness</h2>
+      <p>= {{french}}</p>
+    </a>
+    <a class="item item-avatar" href="">
+      <img src="/img/alman.png">
+      <h2>German Hardness</h2>
+      <p>= {{alman}}</p>
+    </a>
+    <a class="item item-avatar" href="">
+      <img src="/img/ingiliz.jpg">
+      <h2>English Hardness</h2>
+      <p>= {{ingiliz}}</p>
+    </a>
+
+   
+
+</div>
+
+
+    
+</div>     
+
+
+              </div> </div>    </div></div>    
+
+
+
+  </ion-content>
+</ion-view>

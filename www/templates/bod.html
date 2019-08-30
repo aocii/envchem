@@ -1,0 +1,127 @@
+<ion-view view-title="Biochemical Oxygen Demand">
+  <br><br><br><img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+  <ion-content>
+  
+
+<div class="card animated rollIn">
+  <div class="item item-text-wrap">
+
+<div class="bar bar-header bar-balanced">
+  <h1 class="title">Thomas Method </h1>
+  <button class="button button-small button-assertive ion-help" ng-click = "showAlert()"></button>
+</div>
+
+    <br><br>
+
+<div class="card">
+  <div class="item item-text-wrap">
+   &nbsp;&nbsp;&nbsp; In this module, you can calculate the wanted b.o.d. value of the day you entered with the values of the two b.o.d. values you have previously measured on certain days.
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-text-wrap">
+   &nbsp;&nbsp;&nbsp; Enter the time of your first b.o.d. measurement and b.o.d. value.
+   <br>
+<div class="row">
+  <div class="col"><center>Time =</center></div>
+  <div class="col"><input class="input" type="number" placeholder="day" ng-model="d1"></div>
+  <div class="col"><center>B.O.D = </center></div>
+  <div class="col"><input class="input" type="number" placeholder="mg/l" ng-model="bod1"></div>
+</div>
+ </div>
+</div>
+
+
+<div class="card">
+  <div class="item item-text-wrap">
+    &nbsp;&nbsp;&nbsp;And enter here the second measurement time and b.o.d. value. 
+    
+<div class="row">
+  <div class="col"><center>Time = </center></div>
+  <div class="col"><input class="input" type="number" placeholder="day" ng-model="d2"></div>
+  <div class="col"><center>B.O.D = </center></div>
+  <div class="col"><input class="input" type="number" placeholder="mg/l" ng-model="bod2"></div>
+</div>
+ </div>
+</div>
+
+
+<div class="card">
+  <div class="item item-text-wrap">
+&nbsp;&nbsp;&nbsp;Now you must enter the number of day that you search to this input and press the calculate button.
+
+<div class="row">
+  <div class="col"><center>Time = </center> </div>
+  <div class="col"><input class="input" type="number" placeholder="day" ng-model="d">
+</div>
+  
+  <div class="col"></div>
+ 
+</div>
+
+<button class="button button-block button-balanced" ng-click = "bod(d1,bod1,d2,bod2,d)">
+  Calculate
+</button>
+
+</div></div>
+
+
+
+<div class="card">
+  <div class="item item-text-wrap">
+		<div class="row">
+		  <div class="col"><center>B.O.D. {{d}} =</center></div>
+		  <div class="col"><center>{{bodcevap}}(mg/l)</center></div>  
+		</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-text-wrap">
+		<div class="row">
+		  <div class="col"><center>Ultimate B.O.D. =</center></div>
+		  <div class="col"><center>{{bodu}}(mg/l)</center></div>  
+		</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-text-wrap">
+		<div class="row">
+		  <div class="col"><center>Rate constant = </center></div>
+		  <div class="col"><center>{{k}} (1/day)</center></div>  
+		</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-text-wrap">
+		<div class="row">
+		  <div class="col"><center>Slope = </center></div>
+		  <div class="col"><center>{{m}}</center></div>  
+		</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-text-wrap">
+		<div class="row">
+		  <div class="col"><center>Intercept = </center></div>
+		  <div class="col"><center>{{n}}</center></div>  
+		</div>
+  </div>
+</div>
+
+
+<center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>
+
+
+
+    <br><br>
+
+
+  </ion-content>
+</ion-view>

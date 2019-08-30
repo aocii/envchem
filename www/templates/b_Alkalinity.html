@@ -1,0 +1,206 @@
+<ion-view view-title="Alkalinity">
+    <br><br><br><img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+  <ion-content>
+    
+
+  
+    
+    <div class="card animated fadeInDown">
+      <div class="item item-text-wrap"> </br></br>
+        
+          <div class="bar bar-header bar-balanced">
+            <h1 class="title"> Total Alkanitiy Content</h1>
+            <a class="button button-small button-assertive ion-help" href="#/app/17"></a>
+          </div>
+          </br></br>
+        This module calculates the amounts of compounds that cause alkanite in water. 
+                <div class="row">
+                  <div class="col col-75">For the further informations about calculations please touch the button. </div>
+                  <div class="col"><a class="button icon-right ion-chevron-right button-calm" href="#/app/18"></a></div>
+                </div>
+
+
+
+
+
+              <div class="list">
+                <div class="item item-divider">
+<h4>TA & FF are in mg/L Calciumcarbonate</h4>
+                  <div class="list">
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">pH</span>
+                      <input type="number" placeholder="Type pH " ng-model="cph">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">FF</span>
+                      <input type="number" placeholder="Type phenolphatelein alkalinity" ng-model="pp">
+                    </label> 
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">TA</span>
+                      <input type="number" placeholder="Type Total alkalinity" ng-model="ta">
+                    </label>
+                  
+<center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>
+                                            
+                    
+                  </div>
+
+<button class="button button-block button-balanced" ng-click="alk(cph ,pp ,ta)">
+  Calculate
+</button>
+
+
+
+ 					<h2>Precision balance method : </h2>
+                      <div class="row responsive-sm">
+                        <div class="col"> Hidroxide Alkalinity= {{ohalk}}</div>
+                        <div class="col"> Carbonate Alkalinity = {{karbonatalk}} </div>
+                        <div class="col"> Bicarbonate Alkalinity = {{bikarbonatalk}}  </div>
+                      </div>
+                  </br></br>
+
+ 					<h2>Diagram  method : </h2>
+                      <div class="row responsive-sm">
+                        <div class="col"> Hidroxide Alkalinity= {{kabaohalk}}</div>
+                        <div class="col"> Carbonate Alkalinity = {{kabakarbonatalk}} </div>
+                        <div class="col"> Bicarbonate Alkalinity = {{kababikarbonatalk}}  </div>
+                      </div></br></br>
+
+
+ 					<h2>Diagram + pH method : </h2>
+                      <div class="row responsive-sm">
+                        <div class="col"> Hidroxide Alkalinity= {{ohalk}}</div>
+                        <div class="col"> Carbonate Alkalinity = {{phkabakarbonatalk}} </div>
+                        <div class="col"> Bicarbonate Alkalinity = {{phkababikarbonatalk}}  </div>
+                      </div>
+                      
+                    
+                                
+              </div>   </div>    </div>    </div>
+
+<!--   *******************************************   -->
+<div class="card animated fadeInDown">
+      <div class="item item-text-wrap">
+        
+          <div class="bar bar-header bar-balanced">
+            <h1 class="title">Total&Phenolphatelein alkalinity </h1>
+          </div>
+          </br></br>
+        This modul calculates total alkanitiy with hidroxide, carbonate and bicarbonate concentrations. 
+                <div class="row">
+                  <div class="col col-75">For the further informations about calculations please touch the button.</div>
+                  <div class="col"><a class="button icon-right ion-chevron-right button-calm" href="#/app/19"></a></div>
+                </div>
+
+
+
+<div class="button-bar">
+  <a class="button button-{{renk}}" ng-click="chosemolar()">{{tercih1}}</a>
+  
+  
+</div>
+
+              <div class="list">
+                <div class="item item-divider">
+
+                  <div class="list">
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Hidroxide</span>
+                      <input type="number" placeholder="{{tercih}}" ng-model="hidroksit">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Carbonate</span>
+                      <input type="number" placeholder="{{tercih}}" ng-model="karbonat">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Bicarbonate</span>
+                      <input type="number" placeholder="{{tercih}}" ng-model="bikarbonat">
+                    </label>
+                  
+                  </div></div>
+
+<button class="button button-block button-{{renk}}" ng-click="alkcalc(hidroksit ,karbonat, bikarbonat)">
+  Calculate
+</button>
+                      <div class="row responsive-sm">
+                        <div class="col"> Total Alkanity = {{taalk}}</div>
+                      </div>
+                      
+<center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>
+
+                                
+              </div> </div>    </div></div>    
+
+<!--   *******************************************   -->
+    <div class="card animated fadeInDown ">
+      <div class="item item-text-wrap">
+        
+          <div class="bar bar-header bar-balanced">
+            <h1 class="title"> Total Alkanitiy Content</h1>
+          </div>
+          </br></br>
+        In this modul you can see the change of contents of alkalinity instantaneously at a value of total alkalinity which your entered. Enter a total alkalinity value and swipe left and right the switch. 
+                
+
+<div class="row">
+  <div class="col"> </div>
+  <div class="col"><h1>pH</h1>  </div>
+  <div class="col"><h1>{{x/1000}}</h1></div>
+  <div class="col"> </div>
+  
+</div>
+
+
+
+              <div class="Box">
+                <p> Hidroxide % </p> 
+                <p> {{ohyuzde}}</p>
+                <div class="percentage">
+                  <div class="percentage_level" style="width: {{ohyuzde}}% "></div> 
+                </div>
+              </div>
+
+               <div class="Box">
+                <p> Carbonate %</p>
+                <p> {{co3yuzde}} </p>
+                <div class="percentage">
+                  <div class="percentage_level" style="width: {{co3yuzde}}% "></div> 
+                </div>
+              </div>
+
+               <div class="Box">
+                <p>Bicarbonate %</p>
+                <p> {{hco3yuzde}} </p>
+                <div class="percentage">
+                  <div class="percentage_level" style="width: {{hco3yuzde}}% "></div> 
+                </div>
+              </div>
+              
+              <div class="list">
+                <div class="item item-divider">                 
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">TA</span>
+                      <input type="number" placeholder="Type Total alkalinity" ng-model="toplamalkanite">
+                    </label>
+              </div>
+
+                      <div class="row responsive-sm">
+                        <div class="col"> Hidroxide Alkalinity= {{ohalkgraph}}</div>
+                        <div class="col"> Carbonate Alkalinity = {{karbonatalkgraph}} </div>
+                        <div class="col"> Bicarbonate Alkalinity = {{bikarbonatalkgraph}}  </div>
+                      </div> 
+              
+
+                    <div class="item range range-positive">
+                      <input type="range" name="volume" min="0" max="14000" value="100" ng-model="x" ng-change="phg(x,toplamalkanite)">
+                    </div>
+              
+     
+
+            </div></div>
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,399 @@
+<ion-view view-title="Stock - Dilution">
+  <br><br>  <br>
+     <img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+  <ion-content>
+ 
+ 
+<div class="card animated wobble">
+  <div class="item item-text-wrap">
+  		<div class="bar bar-header bar-balanced">
+  			<h1 class="title">Dilution</h1>
+		</div> <br> <br>
+   <div class="card">
+  <div class="item item-text-wrap">
+
+   Select the matter that you want to prepare the solution and type the molarity and volume of your solution which you want to prepare. If your substances is not any of them then enter your data to the inputs directly and press the calculate button. Additionally if you want to calculate normality concentration you should enter the impact value of your substance. <br><br>
+   Use here 
+   <select class="deneme" ng-model = "a">
+      <option value=1 >Strong acid</option>
+      <option value=2 >Weak acid</option>
+      <option value=3 >Strong base</option>
+      <option value=4 >Weak base</option>
+    </select> to see and select the impact values for some common substances for normality calculations. 
+  
+</div>
+</div>
+
+
+<div class="card" ng-if="a == 1">
+  <div class="item item-text-wrap">
+
+<div class="row">
+  <div class="col"><ion-radio   ng-click="asd(0)" ><img class="image" src="/img/hcl.png"></ion-radio></div>
+  <div class="col"><ion-radio  ng-click="asd(1)" ><img class="image" src="/img/h2so4.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col"><ion-radio ng-click="asd(2)" ><img class="image" src="/img/hno3.png"></ion-radio></div>
+  <div class="col"><ion-radio ng-click="asd(3)" ><img class="image" src="/img/hclo4.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col"><ion-radio ng-click="asd(4)" ><img class="image" src="/img/hı.png"></ion-radio></div>
+  <div class="col"><ion-radio ng-click="asd(5)" ><img class="image" src="/img/hbr.png"></ion-radio></div>    
+</div>
+
+
+</div></div>
+
+<div class="card" ng-if = "a == 2">
+  <div class="item item-text-wrap">
+
+<div class="row">
+  <div class="col"><ion-radio ng-click="asd(6)"><img class="image" src="/img/h3po4.png"></ion-radio></div>
+  <div class="col"><ion-radio ng-click="asd(7)"><img class="image" src="/img/edta.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  
+  <div class="col"><ion-radio ng-click="asd(9)" ><img class="image" src="/img/ch3cooh.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col"><ion-radio ng-click="asd(10)"><img class="image" src="/img/hcn.png"></ion-radio></div>
+  <div class="col"><ion-radio ng-click="asd(11)"><img class="image" src="/img/hf.png"></ion-radio></div>    
+</div>
+
+</div></div>
+
+<div class="card" ng-if="a == 3">
+  <div class="item item-text-wrap">
+
+<div class="row">
+  <div class="col"><ion-radio   ng-click="asd(12)" ><img class="image" src="/img/naoh.png"></ion-radio></div>
+  <div class="col"><ion-radio  ng-click="asd(13)" ><img class="image" src="/img/koh.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col"><ion-radio ng-click="asd(14)" ><img class="image" src="/img/mgoh2.png"></ion-radio></div>
+  <div class="col"><ion-radio ng-click="asd(15)" ><img class="image" src="/img/caoh2.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col"><ion-radio ng-click="asd(16)"><img class="image" src="/img/lioh.png"></ion-radio></div>
+     
+</div>
+
+</div></div>
+
+<div class="card" ng-if="a == 4">
+  <div class="item item-text-wrap">
+
+<div class="row">
+  <div class="col"><ion-radio   ng-click="asd(17)" ><img class="image" src="/img/nh3.png"></ion-radio></div>
+  <div class="col"><ion-radio  ng-click="asd(18)" ><img class="image" src="/img/nch33.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col"><ion-radio ng-click="asd(19)" ><img class="image" src="/img/c5h5n.png"></ion-radio></div>
+  <div class="col"><ion-radio ng-click="asd(20)" ><img class="image" src="/img/nh4oh.png"></ion-radio></div>    
+</div>
+
+
+</div></div>
+
+
+<div class="card">
+  <div class="item item-text-wrap">
+
+Use here <select class="deneme"  ng-model="c">
+      <option value="Molarity" >Molarity</option>
+      <option value="Normality" >Normality</option>
+    </select> to choose the concentration type that you want to prepare
+<hr>
+
+
+<div class="row" ng-if="c=='Normality'">
+  <div class="col col-75">type the impact value of your matter </div>
+  <div class="col"><input class="input" type="number" placeholder="" ng-model="ed" ></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the molarity of your stock solution </div>
+  <div class="col"><input class="input" type="number" placeholder="molarity" ng-model="m"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the volume of your solution that you want to prepare</div>
+  <div class="col"><input class="input" type="number" placeholder="ml" ng-model="v"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the concentration that you want to prepare </div>       
+
+  <div class="col"><input class="input" type="number" placeholder="{{c}}" ng-model="sm"></div>
+</div>
+</div>
+
+
+<button class="button button-block button-balanced" ng-click="dlm(c,ed,m,v,sm)">
+  Calculate
+</button>
+{{v2}}
+</div>
+<br>
+<center><a  class="button button-clear button-assertive" ng-click="f5butonu()"> clear inputs </a></center>
+<br>
+
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+
+
+<div class="card animated wobble">
+  <div class="item item-text-wrap">
+      <div class="bar bar-header bar-balanced">
+        <h1 class="title">Stock Solution</h1>
+    </div> <br> <br>
+   <div class="card">
+  <div class="item item-text-wrap">
+
+If you know your substance's required data you can directly type them on the inputs after selecting solid or liquid. Use here <select class="deneme"  ng-model="h">
+      <option value="l" >Liquid</option>
+      <option value="s" >Solid</option>
+    </select> For selecting some common substances use here 
+   <select class="deneme" ng-model = "z">
+      <option value=0 >My substance </option>
+      <option value=1 >Strong acid</option>
+      <option value=2 >Weak acid</option>
+      <option value=3 >Strong base</option>
+      <option value=4 >Weak base</option>
+
+    </select>For selecting the substance type (solid or liquid) that you want to prepare the solution
+  
+</div>
+</div>
+
+
+<div class="card" ng-if="z == 1">
+  <div class="item item-text-wrap">
+
+<div class="row">
+  <div class="col" ng-if="h == 'l' "><ion-radio   ng-click="as(0)" ><img class="image" src="/img/hcl.png"></ion-radio></div>
+  <div class="col" ng-if="h == 'l' "><ion-radio  ng-click="as(1)" ><img class="image" src="/img/h2so4.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col"ng-if="h == 'l' "><ion-radio ng-click="as(2)" ><img class="image" src="/img/hno3.png"></ion-radio></div>
+  <div class="col"ng-if="h == 'l' "><ion-radio ng-click="as(3)" ><img class="image" src="/img/hclo4.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col" ng-if="h == 'l' "><ion-radio ng-click="as(4)" ><img class="image" src="/img/hı.png"></ion-radio></div>
+  <div class="col" ng-if="h == 'l' "><ion-radio ng-click="as(5)" ><img class="image" src="/img/hbr.png"></ion-radio></div>    
+</div>
+
+
+</div></div>
+
+<div class="card" ng-if="z == 2">
+  <div class="item item-text-wrap">
+
+<div class="row">
+  <div class="col" ng-if="h == 'l' "><ion-radio ng-click="as(6)"><img class="image" src="/img/h3po4.png"></ion-radio></div>
+  <div class="col" ng-if="h == 's' "><ion-radio ng-click="as(7)"><img class="image" src="/img/edta.png"></ion-radio></div>    
+</div>
+
+<div class="row" ng-if="h == 'l' ">
+  <div class="col"><ion-radio ng-click="as(8)" ><img class="image" src="/img/hno3.png"></ion-radio></div>
+  <div class="col"><ion-radio ng-click="as(9)" ><img class="image" src="/img/ch3cooh.png"></ion-radio></div>    
+</div>
+
+<div class="row" ng-if="h == 'l' ">
+  <div class="col"><ion-radio ng-click="as(10)"><img class="image" src="/img/hcn.png"></ion-radio></div>
+  <div class="col"><ion-radio ng-click="as(11)"><img class="image" src="/img/hf.png"></ion-radio></div>    
+</div>
+
+</div></div>
+
+<div class="card" ng-if="z == 3">
+  <div class="item item-text-wrap">
+
+<div class="row">
+  <div class="col" ng-if="h == 's' " ><ion-radio   ng-click="as(12)" ><img class="image" src="/img/naoh.png"></ion-radio></div>
+  <div class="col" ng-if="h == 'l' "><ion-radio  ng-click="as(13)" ><img class="image" src="/img/koh.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col" ng-if="h == 'l' "><ion-radio ng-click="as(14)" ><img class="image" src="/img/mgoh2.png"></ion-radio></div>
+  <div class="col" ng-if="h == 's' " ><ion-radio ng-click="as(15)" ><img class="image" src="/img/caoh2.png"></ion-radio></div>    
+</div>
+
+<div class="row">
+  <div class="col" ng-if="h == 'l' "><ion-radio ng-click="as(16)"><img class="image" src="/img/lioh.png"></ion-radio></div>
+     
+</div>
+
+</div></div>
+
+<div class="card" ng-if="z == 4">
+  <div class="item item-text-wrap">
+
+<div class="row" ng-if="h == 'l' ">
+  <div class="col"><ion-radio   ng-click="as(17)" ><img class="image" src="/img/nh3.png"></ion-radio></div>
+  <div class="col"><ion-radio  ng-click="as(18)" ><img class="image" src="/img/nch33.png"></ion-radio></div>    
+</div>
+
+<div class="row" ng-if="h == 'l' ">
+  <div class="col"><ion-radio ng-click="as(19)" ><img class="image" src="/img/c5h5n.png"></ion-radio></div>
+  <div class="col"><ion-radio ng-click="as(20)" ><img class="image" src="/img/nh4oh.png"></ion-radio></div>    
+</div>
+
+
+</div></div>
+
+
+<div class="card">
+  <div class="item item-text-wrap">
+
+
+
+Use here <select class="deneme"  ng-model="y">
+      <option value="Molarity" >Molarity</option>
+      <option value="Normality" >Normality</option>
+    </select> to choose the concentration type that you want to prepare
+<hr>
+
+
+
+ <div ng-if="z==1 || z==2 || z==3 || z == 4 ">
+<div class="row" ng-if="y == 'Normality' ">
+  <div class="col col-75">type the impact value of your matter </div>
+  <div class="col"><input class="input" type="number" placeholder="" ng-model="ed1" ></div>
+</div>
+<hr>
+
+<div class="row" ng-if="h == 'l' " >
+  <div class="col col-75">type the density  of your stock solution </div>
+  <div class="col"><input class="input" type="number" placeholder="gr/cm3" ng-model="d1"></div>
+</div>
+<hr>
+
+<div class="row" ng-if="h == 'l' ">
+  <div class="col col-75">type the volume percentage of your stock solution </div>
+  <div class="col"><input class="input" type="number" placeholder="%" ng-model="p1"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the molecular weight of your matter </div>
+  <div class="col"><input class="input" type="number" placeholder="gr" ng-model="ma1"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the molarity of your stock solution that you want to prepare </div>
+  <div class="col"><input class="input" type="number" placeholder="molarity" ng-model="m1"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the volume of your solution that you want to prepare</div>
+  <div class="col"><input class="input" type="number" placeholder="ml" ng-model="v1"></div>
+</div>
+<hr>
+
+
+
+
+
+<button class="button button-block button-balanced" ng-click="stk (z, y, h , ed1 , d1 , p1 , ma1 , m1 , v1)">
+  Calculate
+</button>
+{{sonuc}}
+
+ 
+
+</div>
+
+
+ <div ng-if="z==0 ">
+<div class="row"  >
+  <div class="col col-75">type the impact value of your matter </div>
+  <div class="col"><input class="input" type="number" placeholder="" ng-model="ed11" ></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the density  of your stock solution </div>
+  <div class="col"><input class="input" type="number" placeholder="gr/cm3" ng-model="d11"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the volume percentage of your stock solution </div>
+  <div class="col"><input class="input" type="number" placeholder="%" ng-model="p11"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the molecular weight of your matter </div>
+  <div class="col"><input class="input" type="number" placeholder="gr" ng-model="ma11"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the molarity of your stock solution that you want to prepare </div>
+  <div class="col"><input class="input" type="number" placeholder="molarity" ng-model="m11"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col col-75">type the volume of your solution that you want to prepare</div>
+  <div class="col"><input class="input" type="number" placeholder="ml" ng-model="v11"></div>
+</div>
+<hr>
+
+
+
+
+
+<button class="button button-block button-balanced" ng-click="st (z, y, h , ed11 , d11 , p11 , ma11, m11 , v11)">
+  Calculate
+</button>
+
+{{sonuc}}
+<br>
+ 
+
+</div>
+
+
+
+
+
+
+<br>
+<center><a  class="button button-clear button-assertive" ng-click = " f5butonu()"> clear inputs </a></center>
+<br>
+  </div>
+</div>
+
+
+</div></div>
+
+
+
+
+  </ion-content>
+
+</ion-view>

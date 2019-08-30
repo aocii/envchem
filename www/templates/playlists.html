@@ -1,0 +1,51 @@
+<ion-view view-title="Environmental Chemistry" >
+  <br><br><br>
+   <img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+   <img class="image full-image" src="/img/y.jpg">
+  <ion-content class="animated fadeInDown">
+
+
+
+<div class="bar bar-header item-input-inset">
+   
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input type="search"  ng-model="ara" placeholder="Search">
+  </label>
+
+  <button class="button">
+    Cancel
+  </button>
+</div>
+
+<a ng-repeat="konu in konular | filter:ara" href="#/app/{{konu.adres}}">
+
+ <div class="list card" >
+
+  <div class="item item-avatar">
+    <img src="/img/giris.png">
+    
+   <h1>{{konu.title}}</h1>
+   
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="{{konu.resim}}">
+    <p>
+      {{konu.aciklama}}
+    </p>
+  
+  </div>
+
+</div> </a>
+
+
+
+
+
+
+    
+  </ion-content>
+
+</ion-view>
